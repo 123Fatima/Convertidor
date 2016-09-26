@@ -132,21 +132,14 @@ private static final long serialVersionUID = 1583724102189855698L;
 			resultado = 0;
 			pantalla.setText("");
 			nuevaOperacion = true;
-		} else {
-			operacion = tecla;
-			if ((resultado > 0) && !nuevaOperacion) {
-				calcularResultado();
-			} else {
-				resultado = new Double(pantalla.getText());
-			}
-		}
+		} 
 
 		nuevaOperacion = true;
 	}
 
 	private void calcularResultado() {
 			resultado = new Double(pantalla.getText()) ;
-                        resultado = resultado * 19;
+                        resultado = resultado / 19;
 		
 		pantalla.setText("" + resultado);
 		operacion = "";
